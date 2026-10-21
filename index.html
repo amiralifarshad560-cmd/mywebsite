@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAMER ZONE | سایت آزمایشی</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #0b1020;
+      color: #f4f7ff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 8%;
+      background: #111a30;
+      border-bottom: 1px solid #253352;
+    }
+    .logo { font-size: 22px; font-weight: bold; color: #55f2c2; }
+    nav a { color: #dce5ff; text-decoration: none; margin: 0 10px; }
+    nav a:hover { color: #55f2c2; }
+    .hero {
+      text-align: center;
+      padding: 75px 20px 65px;
+      background: radial-gradient(circle at top, #203a63, #0b1020 70%);
+    }
+    .hero h1 { font-size: clamp(32px, 5vw, 56px); margin: 0 0 16px; }
+    .hero h1 span { color: #55f2c2; }
+    .hero p { color: #bdc9e4; line-height: 2; max-width: 650px; margin: 0 auto 25px; }
+    .button {
+      display: inline-block;
+      border: 0;
+      border-radius: 10px;
+      padding: 13px 22px;
+      background: #55f2c2;
+      color: #08131c;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    main { max-width: 1100px; margin: auto; padding: 45px 20px; }
+    h2 { margin-bottom: 24px; }
+    .games { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+    .card {
+      background: #141e35;
+      border: 1px solid #263655;
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform .2s, border-color .2s;
+    }
+    .card:hover { transform: translateY(-5px); border-color: #55f2c2; }
+    .emoji { font-size: 38px; }
+    .card p { color: #bdc9e4; line-height: 1.8; }
+    .tag { color: #55f2c2; font-size: 13px; }
+    footer { text-align: center; color: #a8b5d1; padding: 25px; border-top: 1px solid #253352; }
+    @media (max-width: 600px) {
+      header { flex-direction: column; }
+      nav a { margin: 0 5px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🎮 GAMER ZONE</div>
+    <nav>
+      <a href="#home">خانه</a>
+      <a href="#games">بازی‌ها</a>
+      <a href="#about">درباره</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>دنیای بازی، <span>از اینجا شروع می‌شه!</span></h1>
+    <p>به سایت آزمایشی من خوش اومدی. این صفحه با HTML و CSS ساخته شده و دکمه‌اش هم با JavaScript کار می‌کنه.</p>
+    <button class="button" onclick="showMessage()">شروع کن</button>
+  </section>
+
+  <main>
+    <section id="games">
+      <h2>🔥 بازی‌های محبوب</h2>
+      <div class="games">
+        <article class="card">
+          <div class="emoji">🔫</div>
+          <h3>Counter-Strike 2</h3>
+          <p>رقابت تیمی، دقت بالا و تاکتیک‌های هوشمندانه.</p>
+          <span class="tag">FPS · رقابتی</span>
+        </article>
+        <article class="card">
+          <div class="emoji">🏎️</div>
+          <h3>Forza Horizon</h3>
+          <p>رانندگی با ماشین‌های جذاب در دنیایی بزرگ.</p>
+          <span class="tag">Racing · مسابقه‌ای</span>
+        </article>
+        <article class="card">
+          <div class="emoji">🌍</div>
+          <h3>Minecraft</h3>
+          <p>بساز، کشف کن و دنیای مخصوص خودت رو بساز.</p>
+          <span class="tag">Sandbox · خلاقانه</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top: 45px;">
+      <h2>💡 درباره این سایت</h2>
+      <p style="color:#bdc9e4; line-height:2;">این فقط یک پروژه تمرینیه. بعداً می‌تونی رنگ‌ها، متن‌ها، عکس‌ها و امکاناتش رو تغییر بدی و کم‌کم سایت خودت رو بسازی.</p>
+    </section>
+  </main>
+
+  <footer>ساخته‌شده برای تمرین برنامه‌نویسی وب © 2026</footer>
+
+  <script>
+    function showMessage() {
+      alert("عالیه! اولین سایت آزمایشی‌ات رو اجرا کردی 🎉");
+    }
+  </script>
+</body>
+</html>
